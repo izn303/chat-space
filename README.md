@@ -5,7 +5,7 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :chats
 - has_many :users_groupes
@@ -16,10 +16,12 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|name|string|null: false|
+|user_id|string|null: false|
+|chat_id|string|null: false|
 ### Association
-- has_many :posts_tags
-- has_many  :tags,  through: users_groups
+- has_many :users
+- has_many  :users,  through: users_groups
 
 
 
@@ -39,6 +41,7 @@
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|time|integer|  |
+|image|string|  |
 ### Association
 - belongs_to :user
+- belongs_to :group
