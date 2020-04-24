@@ -8,7 +8,7 @@
 |name|string|null: false|
 ### Association
 - has_many :chats
-- has_many :users_groupes
+- has_many :users_groups
 - has_many  :groups,  through: users_groups
 
 
@@ -22,7 +22,7 @@
 ### Association
 - has_many :users
 - has_many  :users,  through: users_groups
-
+- has_many :chats
 
 
 ## users_groupsテーブル
