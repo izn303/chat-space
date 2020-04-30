@@ -39,8 +39,9 @@
 ## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|text|text|  |
+|users_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
 |image|string|  |
 ### Association
 - belongs_to :user
