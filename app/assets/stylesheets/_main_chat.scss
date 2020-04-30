@@ -1,0 +1,107 @@
+.main_chat{
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  .header{
+    background-color:#fff;
+    height: 100px;
+    border: #eeeeee 1px solid;
+    padding: 0 40px;
+    justify-content: space-between;
+    &__group-name{
+      color: #333;
+      font-size: 20px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+    &__user-name{
+      font-size: 12px;
+      color: #999;
+    }
+    .btn{
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      top: 0;
+      right: 40px;
+      position: absolute;
+      padding: 0 20px;
+      border: 1px solid #38aef0;
+      color: #38aef0;
+      text-decoration: none;
+    }
+  }
+  .content{
+    height: calc(100% - 190px);
+    padding: 35px 40px;
+    .contents{
+      height: 74px;
+      &__message{
+        font-size: 14px;
+        color: #434a54;
+        margin-bottom: 46px;
+        }
+      &__info{
+        display: flex;
+        &__user-name{
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
+          margin-bottom: 12px;
+          }
+        &__date{
+          font-size: 12px;
+          color: #999;
+          margin-left: 10px;
+          }
+      }
+    }
+  }
+
+
+
+  .messages{
+    background-color: #d2d2d2;
+    height: 90px;
+    display: flex;
+    padding: 20px 40px;
+
+    &__form{
+      width: 100%;
+      background-color: white;
+      height: 50px;
+      display: flex;
+      position: relative;
+      &__text{
+        width: 100%;
+        .form{
+          padding: 0 10px;
+          border-style: none;
+          line-height: 50px;
+          width: 100%;
+        }
+      }
+      &__img{
+        .image{
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          .input-image{
+            display: none;
+          }
+        }
+      }
+    }
+    .sendbtn{
+      height: 50px;
+      width: 100px;
+      background-color: #38aef0;
+      margin-left: 15px;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      padding: 0 30px;
+    }
+    
+  }
+}
