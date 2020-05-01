@@ -2,11 +2,12 @@
   .side-header
     .side-header__info
       .side-header__info__name
-        name
+        = current_user.name
+
       .side-header__info__icon
-        = link_to "#", class: "btn__edit" do
-          = icon('far', 'edit')
         = link_to "#", class: "btn__cog" do
+          = icon('far', 'edit')
+        = link_to edit_user_path(current_user), class: "btn__edit" do
           = icon('fas', 'cog')
 
   .groups
