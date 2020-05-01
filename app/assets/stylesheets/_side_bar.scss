@@ -35,16 +35,19 @@
   .groups{
     height: calc(100% - 100px);
     background-color: #2f3e51;
-    color: white;
     padding:20px;
   }
     .group{
       height: 91px;
+      a{
+      color: white;
+      text-decoration: none;
+      }
       &__name{
         margin-bottom: 5px;
         font-size: 15px;
       }
-      &__comment{
+      &__message{
         font-size: 11px;
         margin-bottom: 40px;
       }
