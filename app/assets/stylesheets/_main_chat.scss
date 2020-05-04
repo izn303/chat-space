@@ -1,6 +1,5 @@
 .main_chat{
   width: calc(100% - 300px);
-  display: flex;
   flex-direction: column;
   .header{
     background-color:#fff;
@@ -60,39 +59,39 @@
 
 
 
-  .messages{
+
+  .form{
     background-color: #d2d2d2;
     height: 90px;
-    display: flex;
     padding: 20px 40px;
+    width: 100%;
+    
 
-    &__form{
+    &__message{
       width: 100%;
       background-color: white;
       height: 50px;
       display: flex;
       position: relative;
-      &__text{
-        width: 100%;
-        .form{
-          padding: 0 10px;
-          border-style: none;
-          line-height: 50px;
-          width: 100%;
-        }
-      }
-      &__img{
-        .image{
+      padding: 0 10px;
+    }
+    
+      .form__mask{
+      &__image{
+        position: relative;
+        &__icon{
           position: absolute;
           right: 10px;
           top: 15px;
-          .input-image{
+        }
+        &__hidden{
             display: none;
           }
         }
       }
-    }
-    .sendbtn{
+    
+    
+    &__submit{
       height: 50px;
       width: 100px;
       background-color: #38aef0;
@@ -103,5 +102,8 @@
       padding: 0 30px;
     }
     
+  }
+  .new_message{
+    display: flex;
   }
 }

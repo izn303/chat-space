@@ -1,40 +1,24 @@
 .main_chat
   .header
     .header__group-name
-      group
+    = @group.name
     .header__user-name
-      Member : ohara
+      Member : 
+      - @group.users.each do |user|
+        = user.name
     .edit
-    = link_to "#", class: "btn" do
+    = link_to edit_group_path(@group), class: "btn" do
       Edit
+
   .content
-    .contents
-      .contents__info
-        .contents__info__user-name
-          name
-        .contents__info__date
-          2020/04/28(Tue) 20:20:41
-      .contents__message
-        message text
+    = render @messages
 
-    .contents
-      .contents__info
-        .contents__info__user-name
-          name2
-        .contents__info__date
-          2020/04/30(sat) 20:00:00
-      .contents__message
-        message text2
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, class: 'form__message', placeholder: 'type a message'
 
-  .messages
-    .messages__form
-      .messages__form__text
-        %input{type: "text" ,class: "form"}
-        
-      .messages__form__img
-        %label{class: "image"}
-          = icon('far', 'image')
-          %input{type: "file" ,class:"input-image"}
-
-    .messages__send
-      %input{type: "submit" ,value: "Send" ,class: "sendbtn"}
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'form__mask__image__icon')
+          = f.file_field :image, class: 'form__mask__image__hidden'
+      = f.submit 'Send', class: 'form__submit'
