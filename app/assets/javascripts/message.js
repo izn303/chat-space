@@ -52,7 +52,6 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(data){
-    console.log("done")
     var html = buildHTML(data);
     $('.content').append(html);
     $('form')[0].reset();
@@ -64,7 +63,6 @@ $('#new_message').on('submit', function(e){
   })
 
   .fail(function() {
-    console.log("fail")
     alert("メッセージ送信に失敗しました");
   });
 })
